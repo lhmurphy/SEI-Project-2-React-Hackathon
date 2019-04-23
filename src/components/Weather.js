@@ -55,8 +55,6 @@ class Weather extends React.Component {
       </section>
 
 
-
-
     )
   }
 
