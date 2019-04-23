@@ -46,7 +46,7 @@ class Weather extends React.Component {
     return(
       <section className="section">
         <div className="container">
-          <h1 className="title is-1">{this.unixTimestamp.bind(this)}</h1>
+          <h1 className="title is-1">{this.state.time}</h1>
 
         </div>
       </section>
