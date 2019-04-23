@@ -9,6 +9,7 @@ import './style.scss'
 
 import Hero from './components/Hero'
 //import Bikes from './components/Bikes'
+import Weather from './components/Weather'
 
 class App extends React.Component {
   constructor() {
@@ -22,6 +23,8 @@ class App extends React.Component {
         <main>
 
           <Hero />
+
+          <Weather />
         </main>
       </Router>
     )
