@@ -16,7 +16,7 @@ class Weather extends React.Component {
     //.then(res => this.setState({ weather: res.data}))
 
       .then(res => {
-        let presentState = {...this.state}
+        const presentState = {...this.state}
         presentState.currentWeather = res.data.minutely.summary
         presentState.time = res.data.minutely.data[0].time
         presentState.icon = res.data.hourly.data[0].icon
@@ -29,10 +29,10 @@ class Weather extends React.Component {
         })
 
         function unixTimestamp(t) {
-          let dt = new Date(t*1000)
-          let hr = dt.getHours()
-          let m = '0' + dt.getMinutes()
-          let s = '0' + dt.getSeconds()
+          const dt = new Date(t*1000)
+          const hr = dt.getHours()
+          const m = '0' + dt.getMinutes()
+          const s = '0' + dt.getSeconds()
           return hr+ ':' + m.substr(-2) + ':' + s.substr(-2)
         }
 
@@ -47,9 +47,16 @@ class Weather extends React.Component {
       <section className="section">
         <div className="container">
           <h1 className="title is-1">{this.state.time}</h1>
-
+          <h2 className="title is-1">{this.state.currentWeather}</h2>
+          <figure className="image">
+            <img src={this.state.icon} />
+          </figure>
         </div>
       </section>
+
+
+
+
     )
   }
 
