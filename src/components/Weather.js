@@ -48,9 +48,12 @@ class Weather extends React.Component {
         <div className="container">
           <h1 className="title is-1">{this.state.time}</h1>
           <h2 className="title is-1">{this.state.currentWeather}</h2>
-          <figure className="image">
-            <img src={this.state.icon} />
-          </figure>
+          <div className="card-image">
+            <figure className="image is-64x64">
+              <img src={this.state.icon} alt={this.state.icon} />
+            </figure>
+          </div>
+
         </div>
       </section>
 

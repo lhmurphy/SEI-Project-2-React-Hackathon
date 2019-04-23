@@ -12,9 +12,8 @@ class Air extends React.Component {
   }
 
   componentDidMount() {
-    axios.get('https://api.tfl.gov.uk/AirQuality')
+    axios.get('https://cors-anywhere.herokuapp.com/https://api.tfl.gov.uk/AirQuality')
       .then(res =>  this.setState({ air: res.data.currentForecast }))
-
   }
 
   render() {
