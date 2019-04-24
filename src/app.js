@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 
 import { HashRouter as Router } from 'react-router-dom'
 
+//import 'weather-icons/css/weather-icons.css'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import 'bulma'
 import './style.scss'

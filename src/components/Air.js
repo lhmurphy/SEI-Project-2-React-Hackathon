@@ -22,12 +22,13 @@ class Air extends React.Component {
     console.log(this.state.air)
     return (
       <section className="section">
+        <h1 className= "title"> Pollution Levels </h1>
         <div className="container">
           <div className="columns">
             {this.state.air.map(airy =>
               <div className="column" key={airy.forecastID}>
-                <h2>Air: {airy.forecastSummary}</h2>
-                <h2>Air: {airy.nO2Band}</h2>
+                <h2> {airy.forecastSummary}</h2>
+                <h2> {airy.nO2Band}</h2>
               </div>
             )}
           </div>

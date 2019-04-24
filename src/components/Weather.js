@@ -1,5 +1,6 @@
 import React from 'react'
 import axios from 'axios'
+//import 'weather-icons/css/weather-icons.css'
 
 class Weather extends React.Component {
 
@@ -9,7 +10,10 @@ class Weather extends React.Component {
     this.state = {
       weather: []
     }
+
   }
+
+
 
   componentDidMount() {
     axios.get('https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/edd734530cf0d4569f24705b5e593c4a/51.509865,-0.118092')
@@ -27,10 +31,22 @@ class Weather extends React.Component {
         this.setState({
           ...presentState
         })
-
-
       })
   }
+
+  // getIconClass(icon) {
+  //   const className = icon.replace('partly-', '')
+  //     .split('-')
+  //     .reverse()
+  //     .join('-')
+  //   if(className === 'day-clear') {
+  //     return 'wi wi-day-sunny is-size-1'
+  //   }
+  //   if(className === 'wind') {
+  //     return 'wi wi-day-windy is-size-1'
+  //   }
+  //   return `wi wi-${className} is-size-1`
+  // }
 
   render() {
     return(
@@ -40,10 +56,9 @@ class Weather extends React.Component {
             :
             {(new Date().getMinutes())}</h1>
           <h2 className="title is-1">{this.state.currentWeather}</h2>
+
           <div className="card-image">
-            <figure className="image is-64x64">
-              <img src={this.state.icon} alt={this.state.icon} />
-            </figure>
+
           </div>
 
         </div>
@@ -56,3 +71,7 @@ class Weather extends React.Component {
 }
 
 export default Weather
+
+// <p>
+//   <i className = {this.getIconClass(this.state.presentState.icon)}></i>
+// </p>
