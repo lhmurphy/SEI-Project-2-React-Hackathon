@@ -28,25 +28,15 @@ class Weather extends React.Component {
           ...presentState
         })
 
-        function unixTimestamp(t) {
-          const dt = new Date(t*1000)
-          const hr = dt.getHours()
-          const m = '0' + dt.getMinutes()
-          const s = '0' + dt.getSeconds()
-          return hr+ ':' + m.substr(-2) + ':' + s.substr(-2)
-        }
-
-        console.log(unixTimestamp(presentState.time))
 
       })
   }
-
 
   render() {
     return(
       <section className="section">
         <div className="container">
-          <h1 className="title is-1">{this.state.time}</h1>
+          <h1 className="title is-1">{(new Date().getFullYear())}</h1>
           <h2 className="title is-1">{this.state.currentWeather}</h2>
           <div className="card-image">
             <figure className="image is-64x64">
