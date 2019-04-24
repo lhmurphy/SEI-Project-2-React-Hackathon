@@ -22,7 +22,6 @@ class App extends React.Component {
     }
   }
 
-
   componentDidMount() {
     navigator.geolocation.watchPosition((position) => {
       const { latitude, longitude } = position.coords
@@ -47,7 +46,6 @@ class App extends React.Component {
     )
   }
 }
-
 
 ReactDOM.render(
   <App />,

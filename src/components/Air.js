@@ -10,7 +10,7 @@ class Air extends React.Component {
       air: []
     }
   }
-                  
+
   componentDidMount() {
     axios.get('https://cors-anywhere.herokuapp.com/https://api.tfl.gov.uk/AirQuality')
       .then(res => {
