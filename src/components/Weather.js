@@ -36,7 +36,9 @@ class Weather extends React.Component {
     return(
       <section className="section">
         <div className="container">
-          <h1 className="title is-1">{(new Date().getFullYear())}</h1>
+          <h1 className="title is-1">{(new Date().getHours())}
+            :
+            {(new Date().getMinutes())}</h1>
           <h2 className="title is-1">{this.state.currentWeather}</h2>
           <div className="card-image">
             <figure className="image is-64x64">
