@@ -5,17 +5,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibGhtdXJwaHkiLCJhIjoiY2p1dTNzcnNhMGRrMjN5cGl2c
 
 class Map extends React.Component {
 
-  constructor(props) {
-    super(props)
-    this.state = {
-      lng: -0.118092,
-      lat: 51.509865,
-      zoom: 10
-    }
-  }
-
   componentDidMount() {
-    const { lng, lat, zoom } = this.state
+    const { lng, lat, zoom } = this.props
 
     this.map = new mapboxgl.Map({
       container: this.mapContainer,
@@ -23,30 +14,25 @@ class Map extends React.Component {
       center: [lng, lat],
       zoom
     })
+  }
 
-    // map.on('move', () => {
-    //   const { lng, lat } = map.getCenter()
-    //
-    //   this.setState({
-    //     lng: lng.toFixed(4),
-    //     lat: lat.toFixed(4),
-    //     zoom: map.getZoom().toFixed(2)
-    //   })
-    // })
+  componentDidUpdate() {
+    if(this.markers) return false
+
+    this.markers = this.props.bikes.map(bike => {
+      const el = document.createElement('div')
+      el.className = 'marker'
+      
+      new mapboxgl.Marker(el)
+        .setLngLat([bike.lon, bike.lat])
+        .addTo(this.map)
+    })
   }
 
   render() {
 
     return (
-      <div className="section">
-        <div className="container">
-          <div className="columns is-centered">
-            <div className="column is-half-dektop is full-tablet">
-              <div ref={el => this.mapContainer = el} className="map" />
-            </div>
-          </div>
-        </div>
-      </div>
+      <div ref={el => this.mapContainer = el} className="map" />
     )
   }
 }

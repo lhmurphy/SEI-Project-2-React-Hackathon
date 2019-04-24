@@ -13,7 +13,9 @@ class Air extends React.Component {
 
   componentDidMount() {
     axios.get('https://cors-anywhere.herokuapp.com/https://api.tfl.gov.uk/AirQuality')
-      .then(res =>  this.setState({ air: res.data.currentForecast }))
+      .then(res => {
+        this.setState({ air: res.data.currentForecast })
+      })
   }
 
   render() {
@@ -23,7 +25,7 @@ class Air extends React.Component {
         <div className="container">
           <div className="columns">
             {this.state.air.map(airy =>
-              <div className="column" key={airy.updateFrequency}>
+              <div className="column" key={airy.forecastID}>
                 <h2>Air: {airy.forecastSummary}</h2>
                 <h2>Air: {airy.nO2Band}</h2>
               </div>

@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 
 import { HashRouter as Router } from 'react-router-dom'
 
+import 'mapbox-gl/dist/mapbox-gl.css'
 import 'bulma'
 import './style.scss'
 
@@ -10,7 +11,6 @@ import Hero from './components/Hero'
 import Weather from './components/Weather'
 import Air from './components/Air'
 import Bikes from './components/Bikes'
-import Map from './components/Map'
 
 class App extends React.Component {
   constructor() {
@@ -43,8 +43,6 @@ class App extends React.Component {
           <Air />
           <hr />
           <Bikes location={this.state.location} />
-          <hr />
-          <Map />
         </main>
       </Router>
     )
