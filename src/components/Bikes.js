@@ -48,6 +48,7 @@ class Bikes extends React.Component {
           zoom={14}
           bikes={this.state.bikes}
         />
+        <hr />
       </div>
     )
   }

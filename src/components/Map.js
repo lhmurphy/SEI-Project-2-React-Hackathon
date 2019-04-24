@@ -14,7 +14,9 @@ class Map extends React.Component {
       center: [lng, lat],
       zoom
     })
+    this.map.scrollZoom.disable()
   }
+
 
   componentDidUpdate() {
     if(this.markers) return false
@@ -22,7 +24,7 @@ class Map extends React.Component {
     this.markers = this.props.bikes.map(bike => {
       const el = document.createElement('div')
       el.className = 'marker'
-      
+
       new mapboxgl.Marker(el)
         .setLngLat([bike.lon, bike.lat])
         .addTo(this.map)
