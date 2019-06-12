@@ -1,4 +1,4 @@
-# Project_2: Should I cycle in London today? - Front-End Application - React Hackathon - Partner Project
+# Project 2: Should I cycle in London today? - Front-End Application - React Hackathon - Partner Project
 
 ### Timeframe
 1.5 days
@@ -55,4 +55,4 @@ By using a componentDidMount on the navigator.geolocation we were able to correc
 
 ### Future features
 
-We would have liked to implement a 5 day weather forecast with weather icons that changed according to the Darksky weather api data. Also to increase the functionality of the map we would allow the user to click on a bike point that displays the information and exact location on the map. 
+We would have liked to implement a 5 day weather forecast with weather icons that changed according to the Darksky weather api data. Also to increase the functionality of the map we would allow the user to click on a bike point that displays the information and exact location on the map.
