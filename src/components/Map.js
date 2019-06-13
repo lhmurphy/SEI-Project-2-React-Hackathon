@@ -3,6 +3,7 @@ import mapboxgl from 'mapbox-gl'
 
 mapboxgl.accessToken = 'pk.eyJ1IjoibGhtdXJwaHkiLCJhIjoiY2p1dTNzcnNhMGRrMjN5cGl2cmFpNmR0bCJ9.dghNRjtlhnn5h6UTeqnrKA'
 
+
 class Map extends React.Component {
 
   componentDidMount() {

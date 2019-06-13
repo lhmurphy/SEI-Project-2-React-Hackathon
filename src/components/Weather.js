@@ -10,11 +10,10 @@ class Weather extends React.Component {
     this.state = {
       weather: []
     }
-
   }
 
   componentDidMount() {
-    axios.get('https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/fd38a2a8067a54d650cc1cdca9865236/51.509865,-0.118092')
+    axios.get('https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/08dea9c8c411e5e0ab2c153501d6a546/51.509865,-0.118092')
     //.then(res => this.setState({ weather: res.data}))
 
       .then(res => {
