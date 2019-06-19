@@ -27,7 +27,8 @@ class Bikes extends React.Component {
   }
 
   render() {
-    console.log(this.state.bikes)
+    console.log(this.state.bikes.length, 'bikes')
+    if(this.state.bikes.length === 0) return <h1 className= "title"> There are no bike docks near you </h1>
     return (
       <div>
         <div className="container">

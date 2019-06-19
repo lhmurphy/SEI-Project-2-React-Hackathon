@@ -43,11 +43,11 @@ London Map of Local Bike Points
 
 Link to deployed project:
 
-_https://arj8728.github.io/SEI-Project-2-React-Hackathon/#/_
+_https://lhmurphy.github.io/SEI-Project-2-React-Hackathon/#/_
 
 ### Introduction
 
- This was a pair-programming React Hackathon with Laura Murphy.
+ This was a pair-programming React Hackathon with Arjun Mahon.
 
  This application allows a cyclist to decide whether they should cycle in London, based on the  weather, air quality and availability of the nearest bike docks. The user is able to see a one page app that displays the time, two day pollution levels forecast, a selection of bike docks and map displaying these points.
 
